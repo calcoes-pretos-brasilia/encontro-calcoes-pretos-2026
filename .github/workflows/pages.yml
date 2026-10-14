@@ -22,7 +22,7 @@ jobs:
       - name: Preparar site e almanaque completo
         run: |
           mkdir -p _site/assets
-          cp index.html style.css _site/
+          cp index.html style.css almanaque.html _site/
           cp -R assets/. _site/assets/
           cat .almanaque/part-* > _site/assets/ALMANAQUE_v18.pdf
           test "$(wc -c < _site/assets/ALMANAQUE_v18.pdf)" -eq 22783750
